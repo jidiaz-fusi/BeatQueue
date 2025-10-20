@@ -1,31 +1,16 @@
-# Estructuras de Datos en BeatQueue
+# BeatQueue 🎵
+**Aplicación de gestión de canciones y efectos de audio.**
 
-## 1. Cola (FIFO)
-**Clase:** `PlaylistQueue`  
-**Implementación:** `collections.deque`  
-**Uso:** Manejar el orden de reproducción de canciones.  
-**Métodos:** 
-- `enqueue(song)`: agrega una canción al final.
-- `dequeue()`: reproduce y elimina la primera.
+## Descripción
+BeatQueue es un reproductor simple desarrollado en Python con Tkinter.  
+Permite gestionar una **cola de reproducción (cola FIFO)**, **una pila de efectos (LIFO)**  
+y **una lista dinámica de canciones**.
 
-**Motivo:** La reproducción sigue un orden de llegada (primero en entrar, primero en salir).
+## Estructuras de datos principales
+- **Cola (FIFO):** para manejar la lista de canciones a reproducir.
+- **Pila (LIFO):** para aplicar y deshacer efectos de sonido.
+- **Arreglo dinámico (list):** para mantener la colección de canciones.
 
----
-
-## 2. Pila (LIFO)
-**Atributo:** `self.effects_stack`  
-**Tipo:** lista nativa de Python (`list`)  
-**Uso:** Aplicar y deshacer efectos de sonido en orden inverso.  
-**Métodos:** 
-- `add_effect(effect)`
-- `remove_last_effect()`
-
-**Motivo:** los efectos se aplican en orden inverso (último en entrar, primero en salir).
-
----
-
-## 3. Arreglo dinámico
-**Atributo:** `self.songs`  
-**Tipo:** `list`  
-**Uso:** Almacenar todas las canciones disponibles.  
-**Motivo:** permite acceso rápido y tamaño variable, ideal para la lista de canciones.
+## Cómo ejecutar
+```bash
+python src/main.py
